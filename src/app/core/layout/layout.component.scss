@@ -1,0 +1,29 @@
+$toolbar-height: 80px;
+
+main {
+  height: 100%;
+  display: grid;
+  grid-template-areas: 'header' 'content';
+  grid-template-rows: $toolbar-height 1fr;
+  app-header {
+    grid-area: header;
+  }
+  mat-sidenav-container {
+    height: 100%;
+    mat-sidenav {
+      width: 260px;
+      mat-toolbar {
+        height: $toolbar-height;
+      }
+    }
+    mat-sidenav-content {
+      .main-content {
+        grid-area: content;
+        padding: 30px;
+      }
+    }
+  }
+}
+
+
+
